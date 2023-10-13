@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="magic.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ramanujan's_Magic_Square</h1>
+        <div class="details">
+            <input type="text" name="date" id="date" maxlength="2" placeholder="Date/DD" onkeydown="handleArrowKeys(event, 'month', 'century')">
+            <input type="text" name="month" id="month" maxlength="2" placeholder="Month/MM" onkeydown="handleArrowKeys(event, 'century', 'year')">
+            <input type="text" name="century" id="century" maxlength="2" placeholder="Century/CC" onkeydown="handleArrowKeys(event, 'year', 'date')">
+            <input type="text" name="year" id="year" maxlength="2" placeholder="Year/YY" onkeydown="handleArrowKeys(event, 'date', 'month')">
+        </div>
+        <div class="box">
+            <table>
+                <tr>
+                    <td class="dd DD">DD</td>
+                    <td class="mm MM">MM</td>
+                    <td class="cc CC">CC</td>
+                    <td class="yy YY">YY</td>        
+                </tr> 
+                <tr>
+                    <td class="yy e1">YY+1</td>
+                    <td class="cc e2">CC-1</td>
+                    <td class="mm e3">MM-3</td>
+                    <td class="dd e4">DD+3</td>        
+                </tr>
+                <tr>
+                    <td class="mm f1">MM-2</td>
+                    <td class="dd f2">DD+2</td>
+                    <td class="yy f3">YY+2</td>        
+                    <td class="cc f4">CC-2</td>
+                </tr>
+                <tr>
+                    <td class="cc g1">CC+1</td>
+                    <td class="yy g2">YY-1</td>        
+                    <td class="dd g3">DD+1</td>
+                    <td class="mm g4">MM-1</td>
+                </tr>
+            </table>
+        </div>
+        <button id="submit" onclick="submit()" placeholder="submit">submit</button>
+    </div>
+    <script src="squre.js"></script>
+</body>
+</html>
