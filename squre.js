@@ -31,7 +31,6 @@ function submit(){
                 document.querySelector(".g3").innerHTML = formatTwoDigits(add(DD, 1));
                 document.querySelector(".g4").innerHTML = formatTwoDigits(MM - 1);
                 
-                clearAllFields();
             }
             else{
                 clearAllFields();
