@@ -16,19 +16,19 @@ function submit(){
                 document.querySelector(".CC").innerHTML=CC;
                 document.querySelector(".YY").innerHTML=YY;
 
-                document.querySelector(".e1").innerHTML = formatTwoDigits(add(YY, 1));
+                document.querySelector(".e1").innerHTML = formatTwoDigits(parseInt(YY) + 1);
                 document.querySelector(".e2").innerHTML = formatTwoDigits(CC - 1);
                 document.querySelector(".e3").innerHTML = formatTwoDigits(MM - 3);
-                document.querySelector(".e4").innerHTML = formatTwoDigits(add(DD, 3));
+                document.querySelector(".e4").innerHTML = formatTwoDigits(parseInt(DD) + 3);
 
                 document.querySelector(".f1").innerHTML = formatTwoDigits(MM - 2);
-                document.querySelector(".f2").innerHTML = formatTwoDigits(add(DD, 2));
-                document.querySelector(".f3").innerHTML = formatTwoDigits(add(YY, 2));
+                document.querySelector(".f2").innerHTML = formatTwoDigits(parseInt(DD) + 2);
+                document.querySelector(".f3").innerHTML = formatTwoDigits(parseInt(YY) + 2);
                 document.querySelector(".f4").innerHTML = formatTwoDigits(CC - 2);
 
-                document.querySelector(".g1").innerHTML = formatTwoDigits(add(CC, 1));
+                document.querySelector(".g1").innerHTML = formatTwoDigits(parseInt(CC) + 1);
                 document.querySelector(".g2").innerHTML = formatTwoDigits(YY - 1);
-                document.querySelector(".g3").innerHTML = formatTwoDigits(add(DD, 1));
+                document.querySelector(".g3").innerHTML = formatTwoDigits(parseInt(DD) + 1);
                 document.querySelector(".g4").innerHTML = formatTwoDigits(MM - 1);
                 
             }
@@ -45,15 +45,6 @@ function submit(){
     else{
         alert("enter the date");
     }
-}
-
-function add(a , b)
-{
-    for (i = 1; i <= b; i++) 
-    {
-        a++;
-    }
-    return a;
 }
 
 function clearAllFields() {
